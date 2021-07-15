@@ -2,22 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container-fluid{
     height: 100vh;
     width: 100vw;
     background: hsl(229, 57%, 11%);
+    background-image:url(Images/bg-desktop.png);
+    background-repeat:no-repeat;
+    background-position-y:19em;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-img{
-    position:absolute;
-    bottom:0;
-    height: 50vh;
-    width: 100%;
 }
 
 .cajas{
@@ -28,23 +26,51 @@ img{
     width: 55em;
 }
 
+
+/* CAJA IZQUIERDA */
 .caja-1{
     background:hsl(228, 56%, 31%);
     height: 100%;
-    width: 30%;
     margin-right: 0.5em;
     border-radius: 10px;
     border-top-right-radius: 5em;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:flex-start;
+    padding-left:2em;
 }
+
+.logo{
+    background-image: url(Images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 45%;
+    height: 2.1em;
+    margin-bottom: -15%;
+}
+
+.iconos{
+    height: 2em;
+    width: 100%;
+    display:flex;
+    gap: 1em;
+}
+
+.iconos img{
+    background: hsl(229, 57%, 11%);
+    padding: 0.5em;
+    border-radius: 10px;
+    height: 2.3em;
+}
+
+/* CAJA DERECHA */
 .caja-2{
     height: 100%;
-    width: 70%;
     margin-left: 0.5em;
     display: flex;
     flex-direction:column;
 }
-
-
 
 .cajita-1{
     display: flex;
@@ -54,11 +80,18 @@ img{
     height: 35%;
     background: white;
     position: absolute;
-    right: 25px;
+    right: 1em;
+    border-radius: 10px;
 }
 
-p{
-    margin:0;
+.cajita-1 h2{
+    font-weight: 700;
+}
+.cajita-1 p{
+    font-size: 0.7em;
+    margin-bottom: 0;
+    color: hsl(229, 7%, 55%);
+    font-weight: 400;
 }
 
 .cajita-2{
@@ -67,4 +100,391 @@ p{
     background: hsl(228, 56%, 31%);
     margin-top: 2em;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cajita-2 p{
+    color: hsl(243, 100%, 93%);
+    font-size:0.8em;
+    margin-top:3em;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
+.cajita-2 b{
+    font-weight: 700;
+}
+
+#barra{
+    margin-right: auto;
+    margin-left: auto;
+    background: hsl(229, 57%, 11%);
+    height: 1em;
+    width: 90%;
+    border-radius: 1em;
+    padding: 0.1em;
+    display: flex;
+    align-items: center;
+}
+
+#barra>.progreso{
+    height: 100%;
+    width: 81.5%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#barra>.progreso>.punto_blanco{
+    margin-right: 0.1em;
+    height:80%;
+    width: 0.8em;
+    background:white;
+    border-radius: 100%;
+}
+
+.memoria{
+    display:flex;
+    justify-content: space-between;
+    width:95%;
+    margin-top: 0.2em;
+}
+.memoria>p{
+    margin-top: 0;
+    font-weight: 700;
+}
+
+@media screen and (min-width:376px) and (max-width: 910px){
+
+    .container-fluid{
+        height: 100vh;
+        width: 100vw;
+        background: hsl(229, 57%, 11%);
+        background-image:url(Images/bg-mobile.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cajas{
+        position:absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+
+/* CAJA IZQUIERDA */
+.caja-1{
+    background:hsl(228, 56%, 31%);
+    height: 45%;
+    width: 90%;
+    margin-top: 10%;
+    border-radius: 10px;
+    border-top-right-radius: 5em;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    padding-left: 10%;
+}
+
+.logo{
+    background-image: url(Images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 25%;
+    margin-bottom: 13%;
+}
+
+.iconos{
+    width: 100%;
+    height: 20%;
+    display:flex;
+    gap: 1em;
+    margin-bottom: -10%;
+}
+
+.iconos img{
+    background: hsl(229, 57%, 11%);
+    padding: 1em;
+    border-radius: 20px;
+    width: 17%;
+    height: 100%;
+}
+
+/* CAJA DERECHA */
+.caja-2{
+    height: 35%;
+    width: 90%;
+    margin-right: 0.8em;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.cajita-1{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 50%;
+    height: 40%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    margin-top: -8%;
+    margin-left: 10%;
+}
+
+.cajita-1 h2{
+    font-weight: 700;
+    font-size: 250%;
+}
+.cajita-1 p{
+    font-size: 110%;
+    margin-bottom: 0;
+    color: hsl(229, 7%, 55%);
+    font-weight: 400;
+}
+
+.cajita-2{
+    width: 100%;
+    height: 80%;
+    background: hsl(228, 56%, 31%);
+    margin-top: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajita-2 p{
+    color: hsl(243, 100%, 93%);
+    font-size: 1.3em;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    margin-left: 0;
+}
+.cajita-2 b{
+    font-weight: 700;
+}
+
+#barra{
+    margin-right: auto;
+    margin-left: auto;
+    background: hsl(229, 57%, 11%);
+    height: 1.5em;
+    width: 80%;
+    border-radius: 1em;
+    padding: 0.1em;
+    display: flex;
+    align-items: center;
+}
+
+#barra>.progreso{
+    height: 100%;
+    width: 81.5%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#barra>.progreso>.punto_blanco{
+    margin-right: 0.1em;
+    height:80%;
+    width: 4.5%;
+    background:white;
+    border-radius: 100%;
+}
+
+.memoria{
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+}
+.memoria>p{
+    margin-top: 0;
+    font-weight: 700;
+}
+
+}
+
+@media screen and (max-width: 375px){
+
+    .container-fluid{
+        height: 100vh;
+        width: 100vw;
+        background: hsl(229, 57%, 11%);
+        background-image:url(Images/bg-mobile.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cajas{
+        position:absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+
+/* CAJA IZQUIERDA */
+.caja-1{
+    background:hsl(228, 56%, 31%);
+    height: 40%;
+    width: 90%;
+    margin-top: 30%;
+    border-radius: 10px;
+    border-top-right-radius: 5em;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    padding-left: 10%;
+}
+
+.logo{
+    background-image: url(Images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 30%;
+    margin-bottom: 13%;
+}
+
+.iconos{
+    width: 100%;
+    height: 25%;
+    display:flex;
+    gap: 1em;
+    margin-bottom: -10%;
+}
+
+.iconos img{
+    background: hsl(229, 57%, 11%);
+    padding: 1em;
+    border-radius: 20px;
+    width: 20%;
+    height: 100%;
+}
+
+/* CAJA DERECHA */
+.caja-2{
+    height: 40%;
+    width: 90%;
+    margin-right: 0.8em;
+    margin-bottom: 30%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.cajita-1{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 55%;
+    height: 25%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    margin-top:  -8%;
+    margin-left: 10%;
+}
+
+.cajita-1 h2{
+    margin-right: 8%;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.cajita-1 p{
+    font-size: 1em;
+    margin-bottom: 0;
+    color: hsl(229, 7%, 55%);
+    font-weight: 400;
+}
+
+.cajita-2{
+    width: 100%;
+    height: 80%;
+    background: hsl(228, 56%, 31%);
+    margin-top: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajita-2 p{
+    color: hsl(243, 100%, 93%);
+    font-size: 1em;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    margin-left: 0;
+}
+.cajita-2 b{
+    font-weight: 700;
+}
+
+#barra{
+    margin-right: auto;
+    margin-left: auto;
+    background: hsl(229, 57%, 11%);
+    height: 1em;
+    width: 80%;
+    border-radius: 1em;
+    padding: 0.1em;
+    display: flex;
+    align-items: center;
+}
+
+#barra>.progreso{
+    height: 100%;
+    width: 81.5%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#barra>.progreso>.punto_blanco{
+    margin-right: 0.1em;
+    height:80%;
+    width: 4.5%;
+    background:white;
+    border-radius: 100%;
+}
+
+.memoria{
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    margin-top: 0.2em;
+}
+.memoria>p{
+    margin-top: 0;
+    font-weight: 700;
+}
 }
